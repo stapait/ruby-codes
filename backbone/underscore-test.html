@@ -1,0 +1,19 @@
+<!doctype "html">
+<head>
+  <script type="text/javascript" src="js/underscore.js"></script>
+</head>
+<body>
+  <script type="text/javascript">
+    var h = {a: 1, b: 2, c: 3};
+    var arr = [1, 2, 3, 4, 5];
+
+    var a = _.reduce(arr, function(memo, num){
+      return memo + num;
+    }, 0);
+    console.log(a);    
+    
+
+  </script>
+
+</body>
+</html>
