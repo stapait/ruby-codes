@@ -5,13 +5,21 @@
   <script type="text/javascript" src="js/backbone.js"></script>
   <script type="text/javascript" src="js/person.js"></script>
 
+  <script type="text/template" id="person-template">
+    <span class="name">Name: <%= name %> Gender: <%= gender %></span>
+    <button class="testButton">push me</button>
+  </script>
+
   <script type="text/template" id="people-template">
-    <span class="name">Name: <%= name %></span><br />
-    <span class="gender">Gender: <%= gender %></span><br />
+    <h1>Available people</h1>
+    <ul class="people"></ul>
   </script>
 </head>
 
 <body>
+
+  <div id="container">
+  </div>
 
 </body>
 
