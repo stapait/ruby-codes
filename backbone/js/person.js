@@ -13,14 +13,15 @@
     },
 
     clickButton: function() {
-      alert("button clicked");
+      console.log("click", this.model);
     },
-
+    
     initialize: function() {
       _.bindAll(this, 'render');
       this.model.bind('change', this.render);
       this.template = _.template($('#person-template').html());      
     },
+    
     render: function() {
       var renderedContent = this.template(this.model.toJSON());
       $(this.el).html(renderedContent);
@@ -28,7 +29,7 @@
     }
   });
 
-  PeopleView = Backbone.View.extend({
+  PeopleView = PersonView.extend({
     initialize: function() {
       _.bindAll(this, 'render');
       this.collection.bind('add', this.render);
